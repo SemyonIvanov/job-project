@@ -1,6 +1,6 @@
-import FiveS from "./5s";
-import Quality from "./Quality";
-import Smenka from "./Smenka";
+import FiveS from "./5s/5s";
+import Quality from "./Quality/Quality";
+import Smenka from "./Smenka/Smenka";
 
 function Bench() {
   return (

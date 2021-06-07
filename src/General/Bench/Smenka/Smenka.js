@@ -1,6 +1,6 @@
 function Smenka() {
   return (
-    <div class="sz">
+    <div className="sz">
     <h3>Показатели выполнения сменного задания</h3>
     <ol>
       <li>Пофамильные показатели(ФИО | % | Н/Ч)</li>

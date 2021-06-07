@@ -1,6 +1,6 @@
 function FiveS() {
   return (
-    <div class="5s">
+    <div className="5s">
     <h3>Культура производства</h3>
     <ol>
       <li>
