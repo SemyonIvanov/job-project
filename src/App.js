@@ -3,7 +3,7 @@ import Header from './Header/Header';
 import General from './General/General';
 import Register from './Register/Register';
 import Equipment from './Equipment/Equipment';
-import Peoples from './People/people_list/People_list';
+import Peoples from './People/People_list';
 import './scss/nullstyle.scss'
 import './scss/style.scss'
 

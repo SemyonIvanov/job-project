@@ -1,12 +1,24 @@
-import News_Content from "./News_content/Post";
+import Swiper_news from "./News_content/Swiper_news";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.scss';
+
+import data from './News_data.json'
 
 function News() {
   return (
-    <div className="news">
-    <button className="prev button">prew</button>
-    <News_Content content='Последние новости' />
-    <button className="next button">next</button>
-    </div>
+    <Swiper
+    spaceBetween={50}
+    slidesPerView={1}
+  >
+    
+      {data.map((item) => (
+        <SwiperSlide>
+        <div className='news' style={{ background: `center url(${item.image}) no-repeat` }}>
+          <span>{item.textNews}</span>
+        </div>
+        </SwiperSlide>
+      ))}
+  </Swiper>
   );
 }
 

@@ -16,6 +16,13 @@ body {
           line-height: 56px;
           text-transform: uppercase;
           font-weight: 700;
+          a {
+            color: black;
+            text-shadow: 2px 1px 2px black;
+            &:active {
+              text-shadow: none;
+            }
+          }
         }
         .search-form {
           display: flex;
@@ -78,24 +85,16 @@ body {
       }
     }
     .news {
-
       width: 100%;
-      display: flex;
-      align-items: center;
-      margin: 40px 0;
-      .button {
-        width: 5%;
-        height: 70px;
-        border-radius: 50%;
-        background: #80b7b3;
-        margin: 5px;
-        box-shadow: 1px 2px 1px black;
-      }
-      .news-blog {
-        width: 90%;
-        height: 300px;
-        background: chocolate;
-        text-align: center;
+      margin: 30px 0;
+      height: 300px;
+      text-align: center;
+      border-radius: 35px;
+      span {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
+      background-color: white;
       }
     }
   }
