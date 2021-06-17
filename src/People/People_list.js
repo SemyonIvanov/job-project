@@ -1,13 +1,16 @@
-import { NavLink } from "react-router-dom";
-import peolesData from "./Peoples_data.json";
+import { NavLink } from 'react-router-dom';
 
-function Peoples() {
+function Peoples(props) {
   return (
     <div className="peoples">
-      <ol className='peoplesList'>
-      {peolesData.map((people) => (
-      <li><NavLink to={`/people/${people.id}`}>{`${people.firstname} ${people.lastname} ${people.patronym}`}</NavLink></li>
-    ))}
+      <ol className="peoplesList">
+        {props.state.people.map((itemPeople) => (
+          <li>
+            <NavLink
+              to={`/people/${itemPeople.id}`}
+            >{`${itemPeople.firstname} ${itemPeople.lastname} ${itemPeople.patronym}`}</NavLink>
+          </li>
+        ))}
       </ol>
     </div>
   );

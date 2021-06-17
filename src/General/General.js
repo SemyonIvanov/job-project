@@ -1,10 +1,10 @@
 import Bench from './Bench/Bench';
 import News from './News/News';
 
-function General() {
+function General(props) {
   return (
     <div>
-      <News />
+      <News news={props.state.news} />
       <Bench />
     </div>
   );
