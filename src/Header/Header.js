@@ -6,6 +6,9 @@ function Header() {
     <header>
       <Title />
       <HeaderList />
+      <div className="burgerMenu">
+        <span></span>
+      </div>
     </header>
   );
 }
