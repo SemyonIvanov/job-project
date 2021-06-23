@@ -10,8 +10,14 @@ function Master(props) {
     <div className="master">
       <MasterMenu />
       <Route path="/master/szedit" render={() => <Szedit />} />
-      <Route path="/master/newsedit" render={() => <Newsedit />} />
-      <Route path="/master/addpeople" render={() => <Addpeople />} />
+      <Route
+        path="/master/newsedit"
+        render={() => <Newsedit store={props.store.storeNews} />}
+      />
+      <Route
+        path="/master/addpeople"
+        render={() => <Addpeople store={props.store.storePeople} />}
+      />
       <Route path="/master/benchedit" render={() => <Benchedit />} />
     </div>
   );

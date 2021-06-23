@@ -4,7 +4,7 @@ import News from './News/News';
 function General(props) {
   return (
     <div>
-      <News news={props.state.news} />
+      <News news={props.store.storeNews.news} />
       <Bench />
     </div>
   );

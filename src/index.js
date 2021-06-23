@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state from './state';
+import store from './state';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App state={state} />
+      <App store={store} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

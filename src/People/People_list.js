@@ -4,7 +4,7 @@ function Peoples(props) {
   return (
     <div className="peoples">
       <ol className="peoplesList">
-        {props.state.people.map((itemPeople) => (
+        {props.store.storePeople.people.map((itemPeople) => (
           <li>
             <NavLink
               to={`/people/${itemPeople.id}`}

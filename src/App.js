@@ -14,11 +14,16 @@ function App(props) {
     <div className="container">
       <Header />
       <main>
-        <Route path="/general" render={() => <General state={props.state} />} />
-        <Route path="/people" render={() => <Peoples state={props.state} />} />
+        <Route path="/general" render={() => <General store={props.store} />} />
+        <Route path="/people" render={() => <Peoples store={props.store} />} />
         <Route path="/register" render={() => <Register />} />
         <Route path="/equipment" render={() => <Equipment />} />
-        <Route path="/master" render={() => <Master />} />
+        <Route
+          path="/master"
+          render={() => (
+            <Master store={props.store} />
+          )}
+        />
       </main>
       <Footer />
     </div>
