@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Newsedit(props) {
-  let url = React.createRef();
-  let text = React.createRef();
+  const [newUrlNews, setNewUrlNews] = useState(
+    props.store.storeNews.newUrlNews
+  );
+  const [newTextNews, setNewTextNews] = useState(
+    props.store.storeNews.newTextNews
+  );
   let addNewsButton = () => {
-    let newsInfo = {
-      url: url.current.value,
-      text: text.current.value,
-    };
-    props.store.addNews(newsInfo);
+    console.log(props.store.storeNews);
   };
   return (
     <div className="contentMenu">
       <h3>Редактор новостей:</h3>
-      <input type="text" placeholder="Ссылка на изображение" ref={url} />
-      <input type="text" placeholder="Текст" ref={text} />
+      <input
+        type="text"
+        value={newUrlNews}
+        placeholder="Ссылка на изображение"
+        onChange={(e) => setNewUrlNews(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Текст"
+        value={newTextNews}
+        onChange={(e) => setNewTextNews(e.target.value)}
+      />
       <button onClick={addNewsButton}>Добавить новость</button>
     </div>
   );

@@ -12,7 +12,7 @@ function Master(props) {
       <Route path="/master/szedit" render={() => <Szedit />} />
       <Route
         path="/master/newsedit"
-        render={() => <Newsedit store={props.store.storeNews} />}
+        render={() => <Newsedit store={props.store} />}
       />
       <Route
         path="/master/addpeople"

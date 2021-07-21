@@ -2,45 +2,38 @@ let store = {
   storeNews: {
     news: [
       {
-       id: '1',
-       textNews: 'Работяги закрыли месячный план производста за май месяц',
-       image: 'https://static.vl.ru/news/1607995402358_default',
-     },
-     {
+        id: '1',
+        textNews: 'Работяги закрыли месячный план производста за май месяц',
+        image: 'https://static.vl.ru/news/1607995402358_default',
+      },
+      {
         id: '2',
-        textNews:
-          'Работяги забухали в начале июня в честь зарплаты и провалили план на начало месяца',
+        textNews: 'Работяги  в начале июня провалили план на начало месяца',
         image: 'https://www.tn.ru/upload/medialibrary/9db/sulin.jpg',
       },
-     {
-        id: '3',
-       textNews:
-         'Мастер после очередного совещания воодушевил работяг на усиленную работу',
-       image: 'https://pererabotka.gazprom.ru/d/textpage/be/190/dsc04521.jpg',
-     },
       {
-       id: '4',
-       textNews:
+        id: '3',
+        textNews:
+          'Мастер после очередного совещания воодушевил работяг на усиленную работу',
+        image: 'https://pererabotka.gazprom.ru/d/textpage/be/190/dsc04521.jpg',
+      },
+      {
+        id: '4',
+        textNews:
           'Воодушевленные работяги догнали план производства на начало месяца',
         image:
           'https://китайские-автомобили.рф/wp-content/uploads/2020/05/zavod_haval_1_1000.jpg',
-     },
-     {
-       id: '5',
-       textNews:
+      },
+      {
+        id: '5',
+        textNews:
           'Бригада побила рекорд по выработке, после посещения участка начальником цеха',
-       image:
-         'https://static.ukrinform.com/photos/2020_08/thumb_files/630_360_1598880846-705.jpg',
+        image:
+          'https://static.ukrinform.com/photos/2020_08/thumb_files/630_360_1598880846-705.jpg',
       },
     ],
-    addNews(newsInfo) {
-      let newNews = {
-        id: this.news.length + 1,
-        textNews: newsInfo.text,
-        image: newsInfo.url,
-      };
-      this.news.push(newNews);
-    },
+    newTextNews: '1',
+    newUrlNews: '2',
   },
   storePeople: {
     people: [
@@ -69,7 +62,7 @@ let store = {
         patronym: 'Владимирович',
       },
     ],
-    addHuman (newHumanInfo) {
+    addHuman(newHumanInfo) {
       let newHuman = {
         id: this.people.length + 1,
         firstname: newHumanInfo.lastname,
@@ -77,8 +70,8 @@ let store = {
         patronym: newHumanInfo.patronym,
       };
       this.people.push(newHuman);
-    }
-  }
-}
+    },
+  },
+};
 
 export default store;

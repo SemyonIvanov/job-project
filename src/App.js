@@ -18,12 +18,7 @@ function App(props) {
         <Route path="/people" render={() => <Peoples store={props.store} />} />
         <Route path="/register" render={() => <Register />} />
         <Route path="/equipment" render={() => <Equipment />} />
-        <Route
-          path="/master"
-          render={() => (
-            <Master store={props.store} />
-          )}
-        />
+        <Route path="/master" render={() => <Master store={props.store} />} />
       </main>
       <Footer />
     </div>
